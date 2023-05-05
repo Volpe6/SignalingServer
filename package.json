@@ -1,0 +1,27 @@
+{
+  "name": "SignalingServer",
+  "version": "1.0.0",
+  "description": "A simple Node app built on fastify",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/static": "^6.9.0",
+    "@fastify/view": "^7.4.1",
+    "fastify": "^3.29.5",
+    "fastify-cors": "^4.1.0",
+    "fastify-socket.io": "^4.0.0",
+    "handlebars": "^4.7.7",
+    "socket.io": "^4.6.1"
+  },
+  "keywords": [
+    "node",
+    "glitch"
+  ],
+  "repository": "https://github.com/Volpe6/SignalingServer.git",
+  "author": "Volpe6 <baasch2014@gmail.com>",
+  "license": "MIT"
+}
