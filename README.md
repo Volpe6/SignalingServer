@@ -1,2 +1,2 @@
 # SignalingServer
-Um servidor simples de sinalização em node com fastify para utilização de webrtc com implementação de websocktes.
+Um servidor simples de sinalização em node com fastify para utilização de webrtc com implementação de websocktes
