@@ -127,15 +127,33 @@ fastify.ready((err) => {
       }
     });
     
-    socket.on('offer', (offer) => {
-      console.log(`Recebido offer do room`);
-      socket.broadcast.emit('offer', offer);
+    socket.on('offer', (content) => {
+      console.log(`Recebido oferta`);
+      const user = users.get(content.target);
+      console.log('target-offer', content.target);
+      if(user) {
+          socket.to(user).emit('offer', content);  
+      }
     });
     
 
-    socket.on('answer', (answer) => {
-      console.log(`Recebido answer do room`);
-      socket.broadcast.emit('answer', answer);
+    socket.on('answer', (content) => {
+      console.log(`Recebido resposta`);
+      const user = users.get(content.target);
+      console.log('target-answer', content.target);
+      if(user) {
+          socket.to(user).emit('answer', content);  
+      }
+    });
+    
+    
+    socket.on('peerready', (content) => {
+      console.log(`peer pronto`);
+      const user = users.get(content.target);
+      console.log('target-peerready', content.target);
+      if(user) {
+          socket.to(user).emit('peerready', content);  
+      }
     });
   });
   
